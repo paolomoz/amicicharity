@@ -31,6 +31,7 @@ export default async function decorate(block) {
     // decorate nav DOM
     const nav = document.createElement('nav');
     nav.id = 'nav';
+    nav.classList.add('dropdown');
     nav.innerHTML = html;
     navContainer.innerHTML = '';
 
