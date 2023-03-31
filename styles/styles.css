@@ -17,11 +17,11 @@
   --background-color: #fff;
   --overlay-background-color: #eee;
   --highlight-background-color: #ccc;
-  --text-color: #000;
+  --text-color: #252525;
 
   /* fonts */
-  --body-font-family: 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif;
-  --heading-font-family: var(--body-font-family);
+  --body-font-family: 'Montserrat', sans-serif;
+  --heading-font-family: 'Ubuntu', sans-serif;
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
@@ -30,15 +30,15 @@
   --body-font-size-xs: 16px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 48px;
-  --heading-font-size-xl: 40px;
-  --heading-font-size-l: 32px;
-  --heading-font-size-m: 24px;
-  --heading-font-size-s: 20px;
+  --heading-font-size-xxl: 62px;
+  --heading-font-size-xl: 52px;
+  --heading-font-size-l: 36px;
+  --heading-font-size-m: 36px;
+  --heading-font-size-s: 24px;
   --heading-font-size-xs: 18px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 130px;
 
 }
 
@@ -74,11 +74,11 @@ header {
 h1, h2, h3,
 h4, h5, h6 {
   font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: .5em;
-  scroll-margin: calc(var(--nav-height) + 1em);
+  font-weight: bold;
+  color: var(--text-color);
+  margin-top: 3.2px;
+  margin-bottom: 8px;
+  line-height: 1.2;
 }
 
 h1 { font-size: var(--heading-font-size-xxl) }
