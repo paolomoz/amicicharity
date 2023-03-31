@@ -1,14 +1,10 @@
 import { getMetadata, decorateIcons } from '../../scripts/lib-franklin.js';
 
-// media query match that indicates mobile/tablet width
-const isDesktop = window.matchMedia('(min-width: 900px)');
-
 /**
  * decorates the header, mainly the nav
  * @param {Element} block The header block element
  */
 export default async function decorate(block) {
-
   const navContainer = block.querySelector('div');
   navContainer.classList.add('nav-container');
 
@@ -18,7 +14,7 @@ export default async function decorate(block) {
 
   const navRow = document.createElement('nav-row');
   navRow.classList.add('nav-row');
-  navRow.innerHTML = "<a href='https://amici.akaraisin.com/ui/AmiciCampingCharityDonate/donations/start' target='_blank' rel='noopener noreferrer' itemprop='url'>Donate</a>"
+  navRow.innerHTML = "<a href='https://amici.akaraisin.com/ui/AmiciCampingCharityDonate/donations/start' target='_blank' rel='noopener noreferrer' itemprop='url'>Donate</a>";
 
   // fetch nav content
   const navMeta = getMetadata('nav');
