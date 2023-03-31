@@ -42,11 +42,11 @@ nav.dropdown ul {
 
 nav.dropdown a {
   display: block;
-  font-family: "Ubuntu",sans-serif;
+  font-family: var(--heading-font-family);
 }
 
 nav.dropdown ul a {
-  background-color: rgba(0,0,0,0);
+  background-color: #000;
   color: #252525;
   font-size: 20px;
   font-weight: bold;
@@ -80,25 +80,5 @@ nav.dropdown ul ul a {
 }
 
 nav.dropdown ul ul li:not(:last-child) a {
-  border-bottom: 1px solid #fca261;
-}
-
-nav.dropdown ul ul li:not(:last-child) a {
   border-bottom: 1px solid #93d0a7;
-}
-
-body.nav-is-visible .nav-container {
-  position: fixed;
-  transform: translateY(0);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 1, 1);
-}
-
-body.nav-is-visible .nav-container .nav-logo {
-  transition: transform 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-
-@media (min-width: 600px) {
-}
-
-@media (min-width: 900px) {
 }
