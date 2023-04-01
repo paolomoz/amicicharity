@@ -23,4 +23,9 @@ await loadBlock(footerBlock);
 await sleep();
 
 describe('Footer block', () => {
+  it('Displays footer content', async () => {
+    const a = document.querySelector('footer .bottom a');
+    expect(a).to.exist;
+    expect(a.href).to.equal('https://www.amicicharity.org/welcome.html#privacy-policy');
+  });
 });

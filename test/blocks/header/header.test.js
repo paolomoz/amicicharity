@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 /* global describe it */
 
-import { readFile, setViewport } from '@web/test-runner-commands';
+import { readFile } from '@web/test-runner-commands';
 import { expect } from '@esm-bundle/chai';
 
 document.body.innerHTML = await readFile({ path: '../../scripts/dummy.html' });
@@ -27,4 +27,8 @@ await loadBlock(headerBlock);
 await sleep();
 
 describe('Header block', () => {
+  it('Nav exists', async () => {
+    const nav = document.querySelector('.header ul');
+    expect(nav).to.exist;
+  });
 });
