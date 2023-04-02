@@ -82,7 +82,7 @@ body {
   font-family: var(--body-font-family);
   line-height: 1.6;
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: var(--color-green);
   display: none;
 }
 
@@ -259,8 +259,8 @@ main .section {
 
 main .section.nav-container {
   padding: 0;
-  position: relative;
-  bottom: 22px;
+  /* position: relative;
+  bottom: 22px; */
   height: var(--nav-height);
 }
 

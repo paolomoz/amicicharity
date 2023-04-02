@@ -1,4 +1,8 @@
 /* header and nav layout */
+.nav-container > .default-content-wrapper > p {
+  margin: 0;
+}
+
 @media (min-width: 900px) {
   .section.nav-container > div {
     max-width: unset;
@@ -48,6 +52,7 @@ nav.dropdown a {
   display: block;
   font-family: var(--heading-font-family);
   line-height: 34px;
+  text-decoration: none;
 }
 
 nav.dropdown ul a {
@@ -70,13 +75,27 @@ nav.dropdown ul ul {
   background-color: var(--color-green);
 }
 
+nav.dropdown ul ul ul {
+  top: 0;
+  left: 100%;
+}
+
+nav.dropdown li:hover > ul {
+  display: block;
+}
+
 nav.dropdown ul ul li {
   width: 220px;
   padding: 5px 16px;
 }
 
+nav.dropdown ul li:hover a,
 nav.dropdown ul ul a {
   background-color: var(--color-green);
+  color: var(--text-white);
+}
+
+nav.dropdown ul ul a {
   color: #fff;
   width: auto;
   font-size: var(--body-font-size-s);
@@ -84,8 +103,13 @@ nav.dropdown ul ul a {
   padding: 5px 0;
 }
 
+nav.dropdown ul ul a:hover {
+  color: var(--text-color);
+}
+
 nav.dropdown ul ul li:not(:last-child) a {
-  background-color: var(--color-green-light);
+  /* background-color: var(--color-green-light); */
+  border-bottom: 1px solid #93d0a7;
 }
 
 .nav-row a {
