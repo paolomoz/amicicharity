@@ -1,24 +1,33 @@
 /* block specific CSS goes here */
-
 main .hero-container > div {
   max-width: unset;
 }
   
 main .hero-container {
   padding: 0;
+  background-color: unset;
 }
-  
+
 main .hero {
+  padding: 40px 0;
   position: relative;
-  padding: 32px;
-  min-height: 300px;
+}
+
+main .hero h1,
+main .hero h2 {
+  margin-left: 10%;
+  margin-right: 10%;
+  color: white;
+  line-height: 1;
 }
 
 main .hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
+  margin-top:187px;
+}
+
+main .hero h2 {
+  font-size: var(--heading-font-size-l);
+  margin-bottom: 30px;
 }
 
 main .hero picture {
@@ -29,7 +38,9 @@ main .hero picture {
   bottom: 0;
   right: 0;
   object-fit: cover;
+  object-position: 50% 50%;
   box-sizing: border-box;
+  filter: brightness(40%)
 }
 
 main .hero img {

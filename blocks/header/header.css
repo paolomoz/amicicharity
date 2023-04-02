@@ -1,83 +1,47 @@
 /* header and nav layout */
-.nav-container {
-  background: #fff;
+.header.block {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
-  border-bottom: 1px solid #d3d3d3;
-  position: relative;
-  z-index: 50;
-}
-
-.nav-logo {
-  transform: translateX(-300px);
-  margin: 10px;
-  width: 260px;
-  flex-shrink: 0; 
-  display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.nav-logo img {
-  max-width: 260px;
-  max-height: 120px;
-}
-
-nav.dropdown {
-  transform: translateX(-335px);
-  padding: 0 10px 0 50px;
-  flex-shrink: 0;
-}
-
-nav.dropdown ul {
   width: 100%;
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  z-index: 999;
 }
 
-nav.dropdown a {
-  display: block;
-  font-family: var(--heading-font-family);
+header a {
+  color: var(--text-white);
+  transition: border-bottom 0.3s ease;
 }
 
-nav.dropdown ul a {
-  background-color: #fff;
-  color: #252525;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 48px 20px;
-}
-
-nav.dropdown li {
-  position: relative;
+.header-logo {
   flex-shrink: 0;
+  max-width: 100%;
 }
 
-nav.dropdown ul ul {
-  display: none;
-  position: absolute;
-  width: auto;
-  background-color: #4cb16e;
+.search-block {
+  padding-bottom: 11px
 }
 
-nav.dropdown ul ul li {
-  width: 220px;
-  padding: 5px 16px;
+.search-block input[type='search'] {
+  border: 1px solid var(--color-gray-search);
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  color: var(--color-gray-search);
+  font-style: italic;
+  font-size: var(--body-font-size-s);
+  line-height: 24px;
+  font-weight: lighter;
+  height: 36px;
+  width: 250px;
+  padding-left: 40px;
 }
 
-nav.dropdown ul ul a {
-  background-color: #4cb16e;
-  color: #fff;
-  width: auto;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 5px 0;
+.search-block input::placeholder {
+  color: var(--color-gray-search);
 }
 
-nav.dropdown ul ul li:not(:last-child) a {
-  border-bottom: 1px solid #93d0a7;
+.search-block i {
+  font-size: var(--body-font-size-xs);
+  color: var(--color-gray-search);
+  transform: translateX(31.5px) translateY(-1px);
 }

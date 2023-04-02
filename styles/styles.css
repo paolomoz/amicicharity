@@ -32,6 +32,11 @@
   --overlay-background-color: #eee;
   --highlight-background-color: #ccc;
   --text-color: #252525;
+  --text-white: #fff;
+  --color-gray-light: #ccc;
+  --color-gray-search: #d3d3d3;
+  --color-green: #4cb16e;
+  --color-green-light: #93d0a7;
 
   /* fonts */
   --body-font-family: 'Montserrat', 'montserrat-normal-400-fallback', sans-serif;
@@ -51,7 +56,10 @@
   --heading-font-size-s: 24px;
   --heading-font-size-xs: 18px;
 
-  /* nav height */
+  /* header */
+  --header-height: 123px;
+
+  /* nav */
   --nav-height: 130px;
 
 }
@@ -82,7 +90,12 @@ body.appear {
 }
 
 header {
-  height: var(--nav-height);
+  height: var(--header-height);
+  padding: 30px 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 100px);
 }
 
 h1, h2, h3,
@@ -182,6 +195,10 @@ a.button.secondary, button.secondary {
   color: var(--text-color)
 }
 
+input {
+  font-family: var(--body-font-family);
+}
+
 main input {
   font-size: 1.25rem;
   width: 100%;
@@ -236,6 +253,7 @@ main img {
 
 main .section {
   padding: 64px 16px;
+  background-color: var(--background-color);
 }
 
 @media (min-width: 600px) {
