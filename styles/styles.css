@@ -35,6 +35,7 @@
   --text-white: #fff;
   --color-gray-light: #ccc;
   --color-gray-search: #d3d3d3;
+  --color-green-dark: #007f2c;
   --color-green: #4cb16e;
   --color-green-light: #93d0a7;
 
@@ -254,6 +255,13 @@ main img {
 main .section {
   padding: 64px 16px;
   background-color: var(--background-color);
+}
+
+main .section.nav-container {
+  padding: 0;
+  position: relative;
+  bottom: 22px;
+  height: var(--nav-height);
 }
 
 @media (min-width: 600px) {
