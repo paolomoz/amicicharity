@@ -1,4 +1,4 @@
-import { getMetadata, decorateIcons } from '../../scripts/lib-franklin.js';
+import { decorateIcons } from '../../scripts/lib-franklin.js';
 
 /**
  * decorates the header, mainly the nav
@@ -7,8 +7,7 @@ import { getMetadata, decorateIcons } from '../../scripts/lib-franklin.js';
 export default async function decorate(block) {
   const headerLogo = document.createElement('div');
   headerLogo.classList.add('header-logo');
-  headerLogo.innerHTML = 
-    `<a href='/'>
+  headerLogo.innerHTML = `<a href='/'>
       <img alt='Amici Camping Charity' title='logo' src='../../images/amiciwhite.png'>
     </a>`;
 

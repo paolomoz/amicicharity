@@ -1,7 +1,6 @@
 import { getMetadata, decorateIcons } from '../../scripts/lib-franklin.js';
 
 export default async function decorate(block) {
-
   const navLogo = document.createElement('div');
   navLogo.classList.add('nav-logo');
   navLogo.innerHTML = "<a href='https://www.amicicharity.org/welcome.html'><img alt='Amici Camping Charity' title='logo' src='/images/amicicolored.png'></a>";
