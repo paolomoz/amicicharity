@@ -2,8 +2,9 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.hlx.page/
-- Live: https://main--{repo}--{owner}.hlx.live/
+- Original: https://www.amicicharity.org/
+- Preview: https://main--amicicharity--paolomoz.hlx.page/
+- Live: https://main--amicicharity--paolomoz.hlx.live/
 
 ## Installation
 
