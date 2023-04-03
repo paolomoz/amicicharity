@@ -35,6 +35,7 @@
   --text-white: #fff;
   --color-gray-light: #ccc;
   --color-gray-search: #d3d3d3;
+  --color-green-dark-2: #006623;
   --color-green-dark: #007f2c;
   --color-green: #4cb16e;
   --color-green-light: #93d0a7;
@@ -45,9 +46,7 @@
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 18px;
-  --body-font-size-xs: 16px;
+  --body-font-size-m: 16px;
 
   /* heading sizes */
   --heading-font-size-xxl: 62px;
@@ -80,7 +79,7 @@ body {
   font-size: var(--body-font-size-m);
   margin: 0;
   font-family: var(--body-font-family);
-  line-height: 1.6;
+  line-height: 1.8;
   color: var(--text-color);
   background-color: var(--color-green);
   display: none;
@@ -116,7 +115,12 @@ h4 { font-size: var(--heading-font-size-m) }
 h5 { font-size: var(--heading-font-size-s) }
 h6 { font-size: var(--heading-font-size-xs) }
 
-p, dl, ol, ul, pre, blockquote {
+p {
+  margin-top: 0;
+  margin-bottom: 18px;;
+}
+
+dl, ol, ul, pre, blockquote {
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -259,9 +263,11 @@ main .section {
 
 main .section.nav-container {
   padding: 0;
-  /* position: relative;
-  bottom: 22px; */
   height: var(--nav-height);
+}
+
+main .section.nav-container+.section {
+  padding-top: 105px;
 }
 
 @media (min-width: 600px) {
@@ -272,8 +278,9 @@ main .section.nav-container {
 
 @media (min-width: 900px) {
   .section > div {
-    max-width: 1200px;
+    max-width: 1025px;
     margin: auto;
+    padding: 0 50px;
   }
 }
 

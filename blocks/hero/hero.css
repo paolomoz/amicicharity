@@ -1,6 +1,7 @@
 /* block specific CSS goes here */
 main .hero-container > div {
   max-width: unset;
+  padding: 0;
 }
   
 main .hero-container {
@@ -11,6 +12,7 @@ main .hero-container {
 main .hero {
   padding: 40px 0;
   position: relative;
+  min-height: 320px;
 }
 
 main .hero h1,
