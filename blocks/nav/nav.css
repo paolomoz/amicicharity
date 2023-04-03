@@ -53,6 +53,7 @@ main .nav-container > div {
   text-transform: uppercase;
   font-family: var(--heading-font-family);
   font-weight: bold;
+  font-size: var(--body-font-size-l);
 }
 
 nav.dropdown {
