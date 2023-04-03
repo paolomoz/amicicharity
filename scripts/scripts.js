@@ -21,12 +21,14 @@ window.hlx.RUM_GENERATION = 'project-1'; // add your RUM generation information 
  * @param {Element} main The container element
  */
 function buildHeroBlock(main) {
+  console.error(main.innerHTML);
   const h1 = main.querySelector('h1');
   const h2 = main.querySelector('h2');
   const picture = main.querySelector('picture');
+  const homeHero = main.querySelector('.home-hero');
   // eslint-disable-next-line no-bitwise
   const section = document.createElement('div');
-  section.append(buildBlock('hero', { elems: [picture, h1, h2] }));
+  section.append(buildBlock('hero', { elems: [picture, h1, h2, homeHero] }));
   main.prepend(section);
 }
 
