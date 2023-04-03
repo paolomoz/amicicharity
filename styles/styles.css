@@ -35,6 +35,7 @@
   --text-white: #fff;
   --color-gray-light: #ccc;
   --color-gray-search: #d3d3d3;
+  --color-green-dark-3: #093312;
   --color-green-dark-2: #006623;
   --color-green-dark: #007f2c;
   --color-green: #4cb16e;
@@ -82,7 +83,7 @@ body {
   font-family: var(--body-font-family);
   line-height: 1.8;
   color: var(--text-color);
-  background-color: var(--color-green);
+  background-color: var(--color-green-dark-3);
   display: none;
 }
 
