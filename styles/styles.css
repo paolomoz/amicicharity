@@ -10,6 +10,20 @@
  * governing permissions and limitations under the License.
  */
 
+/* fallback font for Montserrat (normal - 400) */
+@font-face {
+  font-family: "montserrat-normal-400-fallback";
+  size-adjust: 115%;
+  src: local("Arial");
+}
+
+/* fallback font for Ubuntu (normal - 400) */
+@font-face {
+  font-family: "ubuntu-normal-400-fallback";
+  size-adjust: 110.6%;
+  src: local("Arial");
+}
+
  :root {
   /* colors */
   --link-color: #035fe6;
@@ -18,16 +32,22 @@
   --overlay-background-color: #eee;
   --highlight-background-color: #ccc;
   --text-color: #252525;
+  --text-white: #fff;
+  --color-gray-light: #ccc;
+  --color-gray-search: #d3d3d3;
+  --color-green-dark-2: #006623;
+  --color-green-dark: #007f2c;
+  --color-green: #4cb16e;
+  --color-green-light: #93d0a7;
 
   /* fonts */
-  --body-font-family: 'Montserrat', sans-serif;
-  --heading-font-family: 'Ubuntu', sans-serif;
+  --body-font-family: 'Montserrat', 'montserrat-normal-400-fallback', sans-serif;
+  --heading-font-family: 'Ubuntu', 'ubuntu-normal-400-fallback', sans-serif;
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 18px;
-  --body-font-size-xs: 16px;
+  --body-font-size-m: 16px;
+  --body-font-size-l: 22px;
 
   /* heading sizes */
   --heading-font-size-xxl: 62px;
@@ -37,7 +57,10 @@
   --heading-font-size-s: 24px;
   --heading-font-size-xs: 18px;
 
-  /* nav height */
+  /* header */
+  --header-height: 123px;
+
+  /* nav */
   --nav-height: 130px;
 
 }
@@ -57,9 +80,9 @@ body {
   font-size: var(--body-font-size-m);
   margin: 0;
   font-family: var(--body-font-family);
-  line-height: 1.6;
+  line-height: 1.8;
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: var(--color-green);
   display: none;
 }
 
@@ -68,7 +91,12 @@ body.appear {
 }
 
 header {
-  height: var(--nav-height);
+  height: var(--header-height);
+  padding: 30px 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 100px);
 }
 
 h1, h2, h3,
@@ -88,7 +116,12 @@ h4 { font-size: var(--heading-font-size-m) }
 h5 { font-size: var(--heading-font-size-s) }
 h6 { font-size: var(--heading-font-size-xs) }
 
-p, dl, ol, ul, pre, blockquote {
+p {
+  margin-top: 0;
+  margin-bottom: 18px;;
+}
+
+dl, ol, ul, pre, blockquote {
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -168,6 +201,10 @@ a.button.secondary, button.secondary {
   color: var(--text-color)
 }
 
+input {
+  font-family: var(--body-font-family);
+}
+
 main input {
   font-size: 1.25rem;
   width: 100%;
@@ -222,6 +259,16 @@ main img {
 
 main .section {
   padding: 64px 16px;
+  background-color: var(--background-color);
+}
+
+main .section.nav-container {
+  padding: 0;
+  height: var(--nav-height);
+}
+
+main .section.nav-container+.section {
+  padding-top: 105px;
 }
 
 @media (min-width: 600px) {
@@ -232,8 +279,9 @@ main .section {
 
 @media (min-width: 900px) {
   .section > div {
-    max-width: 1200px;
+    max-width: 1025px;
     margin: auto;
+    padding: 0 50px;
   }
 }
 
