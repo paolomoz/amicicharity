@@ -28,7 +28,7 @@ export default async function decorate(block) {
       } else {
         row2.append(div);
       }
-    })
+    });
 
     block.append(row1);
     block.append(row2);
