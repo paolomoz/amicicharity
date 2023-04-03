@@ -18,7 +18,7 @@
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
-  font-family: "Ubuntu",sans-serif;
+  font-family: var(--heading-font-family);
 }
 
 .footer .footer-row:first-of-type div:nth-of-type(1) ul {
@@ -50,7 +50,7 @@
   flex: 0 1 auto;
   margin: 50px 50px 50px 0;
   padding-left: 50px;
-  border-left: 1px solid rgba(211,211,211,0.2);
+  border-left: 1px solid var(--color-gray-search);
   color: var(--color-gray-search);
 }
 
