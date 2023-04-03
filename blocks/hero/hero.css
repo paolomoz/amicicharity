@@ -37,8 +37,8 @@ main .home-hero {
   line-height: 1.7;
   font-weight: lighter;
   padding: 50px;
-  margin: 183px auto 0;
-  font-size: 20px;
+  margin: 173px auto 0;
+  font-size: 16px;
 }
 
 main .home-hero h3,
@@ -78,6 +78,15 @@ main .home-hero ul li a {
   max-width: 100%;
   text-decoration: none;
   line-height: 24px;
+}
+
+@media (max-width: 1440px) {
+  main .home-hero {
+    width: auto;
+  }
+  main .home-hero ul li a {
+    padding: 30px 10px;
+  }
 }
 
 main .hero h1 {
